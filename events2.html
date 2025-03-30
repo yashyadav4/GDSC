@@ -1,0 +1,65 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Grid Animation</title>
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(100, 20px);
+            grid-template-rows: repeat(15, 20px);
+            gap: 2px;
+        }
+        .pixel {
+            width: 20px;
+            height: 20px;
+            background: #222;
+            transition: background 0.3s;
+        }
+        .pixel.active {
+            background: lime;
+        }
+        .text {
+            position: absolute;
+            color: white;
+            font-size: 3rem;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="text">DO MORE WITH YOUR DATA</div>
+    <div class="grid" id="grid"></div>
+    <script>
+        const grid = document.getElementById("grid");for (let i = 0; i < 2000; i++) {
+        const pixel = document.createElement("div");
+        pixel.classList.add("pixel");
+        grid.appendChild(pixel);
+    }
+
+    function animateGrid() {
+        const pixels = document.querySelectorAll(".pixel");
+        pixels.forEach(pixel => {
+            setTimeout(() => {
+                pixel.classList.add("active");
+                setTimeout(() => pixel.classList.remove("active"), 1000);
+            }, Math.random() * 2000);
+        });
+    }
+
+    setInterval(animateGrid, 2000);
+</script>
+
+</body>
+</html>
