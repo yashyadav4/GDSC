@@ -12,7 +12,6 @@
     scroll-behavior: smooth;
     /* font-family: "Pixelify Sans", sans-serif; */
     font-family: "Titillium Web", sans-serif;
-    /* overflow-y:; */
 }
 .hero{
     height: 100vh;
@@ -74,8 +73,8 @@ header{
     gap: 2px;
 }
 .pixel {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background: #222; /* Original color */
     transition: background-color 1s ease-out;
 }
@@ -156,21 +155,24 @@ header{
 }
 
 .btndiv {
+    margin:5vh 0;
     display: flex;
     justify-content: space-evenly;
     gap: 20px;
+    flex-direction: column;
     /* padding: 50px; */
 }
 .btn {
     padding: 5px 30px;
-    border: none;
+    border: 1px solid black;
     border-radius: 50px;
     font-size: 16px;
+    width: 100%;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 .btn-1 {
-    border: 1px solid black;
+
     background-color: white;
     color: black;
 }
@@ -179,11 +181,21 @@ header{
     color: white;
 }
 .btn-2 {
-    border: 1px solid black;
+  
     background-color: white;
     color: black;
 }
 .btn-2:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn-3 {
+  
+    background-color: white;
+    color: black;
+}
+.btn-3:hover {
     background-color: black;
     color: white;
 }
@@ -221,13 +233,10 @@ header{
     display: inline-block;
 }
 .heading{
+    margin:5vhpx 0 0 1.5vw;
     font-weight: 600;
     color:#222;
     font-size: 1.5rem;
-    /* font-weight: ; */
-    
-    
-    
 }
 .red{
     color:red;
@@ -245,22 +254,29 @@ header{
 .green{
     color:green
 }
-.heropage2{
+.heroPage2{
     display: flex;
     align-items: center;
-
-    justify-content: center;
+    flex-direction: column;
+    /* justify-content: center; */
     margin-left: 1.5vw;
     margin-right: 1.5vw;
+    padding-top: 10vh;
+    height: 100vh;
 }
 .container2 {
     max-width: 900px;
     margin: 50px auto;
-    padding: 20px;
+    /* padding: 20px; */
     position: relative;
     /* top:100vh; */
     z-index: 2;
+    height:100%;
 }
+.contentBlock2{
+    height:100%;
+}
+
 .section {
     opacity: 0;
     transform: translateY(20px);
@@ -276,6 +292,7 @@ header{
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    /* height:100%; */
 }
 .grid2 div {
     flex: 1;
@@ -297,7 +314,7 @@ header{
 
 footer{
     position: relative;
-    /* top:170vh; */
+    
     
 }
 
