@@ -72,3 +72,38 @@ function fadeInOnScroll() {
 document.addEventListener('scroll', fadeInOnScroll);
 fadeInOnScroll();
 
+
+// =======================================================================
+const names = ["Team GridGang", "Yash yadav", "Kanha Agarwal"];
+const typedText = document.getElementById("typed-text");
+
+let nameIndex = 0;
+let charIndex = 0;
+let typing = true;
+
+function typeEffect() {
+  const currentName = names[nameIndex];
+
+  if (typing) {
+    if (charIndex < currentName.length) {
+      typedText.textContent += currentName.charAt(charIndex);
+      charIndex++;
+      setTimeout(typeEffect, 150);
+    } else {
+      typing = false;
+      setTimeout(typeEffect, 1000); // Pause before deleting
+    }
+  } else {
+    if (charIndex > 0) {
+      typedText.textContent = currentName.substring(0, charIndex - 1);
+      charIndex--;
+      setTimeout(typeEffect, 100);
+    } else {
+      typing = true;
+      nameIndex = (nameIndex + 1) % names.length;
+      setTimeout(typeEffect, 500);
+    }
+  }
+}
+
+typeEffect();

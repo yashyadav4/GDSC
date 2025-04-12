@@ -1,0 +1,177 @@
+
+/* #========================================animations============================================= */
+
+@keyframes appear-ani{
+    0%{
+        opacity: 0;
+        /* scale: 0.5; */
+    }
+    60%{
+        opacity:0;
+        clip-path: inset(100% 100% 0 0);
+    }
+    100%{
+        opacity: 1;
+        /* scale: 1; */
+        clip-path: inset(0 0 0 0);
+    }
+}
+@keyframes transright-ani{
+    0%{
+        opacity: 0;
+        transform: translateX(-20vw);
+        /* left:100px */
+    }
+    60%{
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0vw);
+        /* left: 0px; */
+    }
+}
+@keyframes transleft-ani{
+    0%{
+        opacity: 0;
+        transform: translateX(20vw);
+    }
+    60%{
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+@keyframes transdown-ani{
+    0%{
+        opacity: 0;
+        transform: translateY(-5vh);
+    }
+    60%{
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0vh);
+    }
+}
+@keyframes transup-ani{
+    0%{
+        opacity: 0;
+        transform: translatey(5vh);
+    }
+    60%{
+        opacity:0;
+    }
+    100%{
+        opacity: 1;
+        transform: translatey(0vh);
+    }
+}
+.appear{
+    animation: appear-ani 15s ease 0.5s 1 alternate; 
+    animation-timeline: view(); 
+    animation-range: entry 0% cover 30%;
+
+}
+.transright{
+    animation:transright-ani 0.8s ease 1ms alternate;
+}
+.transleft{
+    animation:transleft-ani 0.8s ease 1ms  alternate;
+}
+.transdown{
+    animation:transdown-ani 0.8s ease 1ms alternate;
+}
+.transup{
+    animation:transup-ani 0.8s ease 1ms alternate;
+}
+.animationonscroll{
+    animation-timeline: view();     
+    /* to give animation upon scroll */
+    animation-range: entry 0% cover 30%;
+    /* starts animatiomn upon entry 
+    cover is for completing animation till 40%vh  */
+    /* using clip-path div grows from 0 to 100 */
+}
+/* .textblock2 h1{
+    overflow: hidden;
+    white-space: nowrap; /*for single line
+    border-right: 1px solid;
+    animation: typing 1.8s steps(24) forwards ,
+    blink 1s step-end infinite;
+}
+@keyframes typing{
+    from{
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+@keyframes blink{
+    50%{
+        border-color:transparent;
+    }
+} */
+
+
+
+@keyframes transright-ani2{
+    0%{
+        opacity: 0;
+
+        /* left:100px */
+    }
+    80%{
+        opacity:0;
+        transform: translateX(-5vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0vw);
+        /* left: 0px; */
+    }
+}
+@keyframes transleft-ani2{
+    0%{
+        opacity: 0;
+    }
+    80%{
+        opacity:0;
+        transform: translateX(5vw);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+}
+@keyframes transup-ani2{
+    0%{
+        opacity: 0;
+
+        /* left:100px */
+    }
+    80%{
+        opacity:0;
+        transform: translateY(-5vh);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0vh);
+        /* left: 0px; */
+    }
+}
+.transright2{
+    animation:transright-ani2 1.5s ease 1ms alternate;
+}
+.transleft2{
+    animation:transleft-ani2 1.5s ease 1ms  alternate;
+}
+
+.transup2{
+    animation:transup-ani2 1.5s ease 1ms  alternate;
+}

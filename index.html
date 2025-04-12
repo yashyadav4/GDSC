@@ -4,8 +4,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GDSC,IET-DAVV</title>
+  <title>GDSC IET-DAVV</title>
+  <link rel="icon" type="image/png" href="/gdscLogoOnly.svg">
+
   <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/animation.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
 
@@ -19,24 +22,24 @@
         <a id="currentpage nav hov" target="_main" href="/index.html">Home</a>
         <a href="events.html" target="_main" id="nav hov">Events</a>
         <a href="team.html" target="_main" id="nav hov">team</a>
-        <a href="#contact" target="_main" id="nav hov">Contact</a>
+        <a href="contact.html" target="_main" id="nav hov">Contact</a>
       </div>
 
     </header>
-    <div style="position:relative; height: 7vh;width: 100%; z-index: 3;"></div>
+    <div style="position:relative; height: 7vh;width: 100%; z-index: -3;"></div>
     <!-- check this out  -->
-    <div class="container">
+    <div class="container transup">
       <div class="grid" id="grid"></div>
-      <div class="text">Developer's Student Club IET-DAVV</div>
+      <div class="text transup2">Developer's Student Club IET-DAVV</div>
     </div>
-    <div class="info">
+    <div class="info transright2">
       <div class="info1"><b>400+</b> Members in the community</div>
       <div class="info2"><b>20+</b> Events hosted in community</div>
       <div class="info3"><b>600+</b> Swags distributed in community</div>
     </div>
 
 
-    <div class="btndiv">
+    <div class="btndiv transup2">
       <button class="btn btn-1">Contact with us. <i class="fa-solid fa-arrow-right"></i></button>
       <a href="/events.html"><button class="btn btn-2">Ongoing events <i
             class="fa-solid fa-arrow-right"></i></button></a>
@@ -46,47 +49,15 @@
 
   <!-- -------------------------------------page 2-------------------------------------------------------------------------------------------------------------- -->
   <div class="heroPage2" id="page2">
-    <div class="contentBlock2 heading">
-      At
+    <div class="NavSpace">
+    </div>
+    <div class="headingP2">At
       <span class="font-medium"><span class="blue">G</span><span class="green">o</span><span class="red">o</span><span
           class="yellow">g</span><span class="blue">l</span><span class="red">e</span>
       </span>
 
       Student Developer Club IET-DAVV
     </div>
-
-    <br>
-    <br>
-
-    <!-- <div class="2ndpage">
-      <div class="div1 fade-in">
-        <div class="div1l">
-          <div class="heading">Our Mission</div>
-          We're built different, so we build different. Our mission is to
-          empower future developers by bringing students passionate about
-          technology together and helping them grow their skills in tech,
-          regardless of background.
-        </div>
-        <div class="div1r">
-          <div class="heading">Our Values</div>
-          We believe you don't need to code to be a developer. We develop both
-          products and people by making Google technologies accessible to
-          everyone through workshops, events, and more. Dreamers, problem
-          solvers, and tinkerers: That's who we are
-        </div>
-      </div>
-      <br />
-      <div class="div2 fade-in">
-        <div class="div2l">
-          <div class="heading">Our Events</div>
-          Immerse yourself in the future of technology at our cutting-edge
-          events, where ideas become reality and innovation flourishes. Here,
-          you'll discover workshops, resources, and networking opportunities
-          designed to propel your career in the tech field.
-        </div>
-        <div class="div2r"></div>
-      </div>
-    </div> -->
     <div class="container2">
       <div class="grid2 section">
         <div>
@@ -115,6 +86,7 @@
       </div>
     </div>
   </div>
+  
   <!-- ======================footer======================================================================================================= -->
   <footer>
     <div class="hrfoot"></div>
@@ -135,9 +107,16 @@
         <i class="fa-brands fa-facebook"></i>
       </div>
     </div>
-    <div class="love">
-      <h5>made with love ❤️.</h5>
+    <div class="love ">
+      <h5>made by <span id="typed-text"></span><span class="cursor">|</span></h5>
     </div>
+
+
+    <!-- <div class="typing-container">
+      <span id="typed-text"></span><span class="cursor">|</span>
+    </div> -->
+
+
   </footer>
 
   <script src="/script.js"></script>
