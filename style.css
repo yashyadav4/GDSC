@@ -270,7 +270,7 @@ header{
 .grid2 div {
     flex: 1;
 }
-.button-container {
+/* .button-container {
     text-align: center;
     margin-top: 20px;
 }
@@ -282,7 +282,8 @@ header{
     text-decoration: none;
     display: inline-block;
     font-weight: bold;
-}
+} */
+
 /* ===========================footer================================= */
 
 footer{
@@ -365,7 +366,7 @@ footer{
     0%, 50%, 100% { opacity: 1; }
     25%, 75% { opacity: 0; }
   }
-  
+
 /* =========================================contact==================================================== */
 .hero-contact{
     display: flex;

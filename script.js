@@ -74,7 +74,7 @@ fadeInOnScroll();
 
 
 // =======================================================================
-const names = ["Team GridGang", "Yash yadav", "Kanha Agarwal"];
+const names = ["Team GridGang.", "Yash yadav.", "Kanha Agarwal."];
 const typedText = document.getElementById("typed-text");
 
 let nameIndex = 0;
